@@ -29,8 +29,11 @@ h. Go to signaling-server folder
 
 4. Change the server IP address in both the sender and receiver files as per the new IP from EC2. IP refreshes every time server is switched on, if it was off earlier. If it continued to run, then IP address shouldn't have changed.
 
-6. Copy the receiver python file in your catkin workspace, and then catkin_make. Install the dependencies, if not already installed. You might need to install dependencies like aiortc. Run roscore in one terminal. Run the python file using **python3 receivegamepadudp.py** in another terminal. **Please Note that you should open the python before you open the html. It might make a difference for UDP if you don't do this. If you opened python later, just refresh the html.**
+6. Copy the receiver python file in your catkin workspace, and then catkin_make. Install the dependencies, if not already installed. You might need to install dependencies like aiortc. Run roscore in one terminal. Run the python file using **python3 receivegamepadudp.py** in another terminal. **Wait for 2 seconds for it to give these 2 logs -
+[INFO] [1689998161.080578]: WebSocket client node initialized
+WebSocket connected
+Now, you can move to the next step. Please Note that you should open the python and wait till you get websocket connected before you open the html. It might make a difference for UDP if you don't do this. If you opened python later, just refresh the html once you get websocket connected message in python.**
 
-5. Save both the sender files in the same folder in desktop. Open the sender html file in chrome. **Please Note that you should open the html after you have opened the python. It might make a difference for UDP if you don't do this. If you opened python later, just refresh the html.** Open Inspect/Console to check the logs. 
+5. Save both the sender files in the same folder in desktop. Open the sender html file in chrome. Open Inspect/Console to check the logs. 
 
 7. **Give it a few seconds for the browser to establish the connection before trying out gamepad. You will see in browser console that the connection is established and data channel is opened with hello world message sent from browser and receieved in python. Then you can move the joystick**
