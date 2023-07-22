@@ -1,6 +1,8 @@
 # Joystick_ROS_UDP
 
-This repo sends gamepad/joystick data fom Browser to ROS via TCP connection via a server.
+**Most of the steps are similar to the TCP code here https://github.com/ashishsharmaiit/Joystick_ROS_TCP.git though there might be filename changes. Highlighting** changes in **bold** in the narrative below.
+
+This repo sends gamepad/joystick data fom Browser to ROS via **UDP** connection via a server.
 
 Steps to use this code:
 
@@ -23,10 +25,12 @@ g. now you should be have ssh into the EC2 server.
 h. Go to signaling-server folder
 
 
-2. Type the command node iceoffer.js to run the server file. The file should be already saved in the server. No need to copy it.
+2. Type the command **node iceoffer.js** to run the server file. The file should be already saved in the server. No need to copy it.
 
 4. Change the server IP address in both the sender and receiver files as per the new IP from EC2. IP refreshes every time server is switched on, if it was off earlier. If it continued to run, then IP address shouldn't have changed.
 
-5. Save both the sender files in the same folder in desktop. Open the sender html file in chrome. Open Inspect/Console to check the logs.
+6. Copy the receiver python file in your catkin workspace, and then catkin_make. Install the dependencies, if not already installed. You might need to install dependencies like aiortc. Run roscore in one terminal. Run the python file using **python3 receivegamepadudp.py** in another terminal. **Please Note that you should open the python before you open the html. It might make a difference for UDP if you don't do this. If you opened python later, just refresh the html.**
 
-6. Copy the receiver python file in your catkin workspace, and then catkin_make. Install the dependencies, if not already installed. You might need to install dependencies like aiortc. Run roscore in one terminal. Run the python file using python3 receivegamepadudp.py in another terminal.
+5. Save both the sender files in the same folder in desktop. Open the sender html file in chrome. **Please Note that you should open the html after you have opened the python. It might make a difference for UDP if you don't do this. If you opened python later, just refresh the html.** Open Inspect/Console to check the logs. 
+
+7. **Give it a few seconds for the browser to establish the connection before trying out gamepad. You will see in browser console that the connection is established and data channel is opened with hello world message sent from browser and receieved from python. Then you can move the joystick**
