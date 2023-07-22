@@ -29,5 +29,4 @@ h. Go to signaling-server folder
 
 5. Save both the sender files in the same folder in desktop. Open the sender html file in chrome. Open Inspect/Console to check the logs.
 
-6. Copy the receiver python file in your catkin workspace, and then catkin_make. Install the dependencies, if not already installed. You might need to install dependencies like aiortc. Run roscore in one terminal. Run the python file using python3 receivegamepadudp.py
-
+6. Copy the receiver python file in your catkin workspace, and then catkin_make. Install the dependencies, if not already installed. You might need to install dependencies like aiortc. Run roscore in one terminal. Run the python file using python3 receivegamepadudp.py in another terminal.
