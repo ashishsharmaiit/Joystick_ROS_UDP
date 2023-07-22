@@ -33,4 +33,4 @@ h. Go to signaling-server folder
 
 5. Save both the sender files in the same folder in desktop. Open the sender html file in chrome. **Please Note that you should open the html after you have opened the python. It might make a difference for UDP if you don't do this. If you opened python later, just refresh the html.** Open Inspect/Console to check the logs. 
 
-7. **Give it a few seconds for the browser to establish the connection before trying out gamepad. You will see in browser console that the connection is established and data channel is opened with hello world message sent from browser and receieved from python. Then you can move the joystick**
+7. **Give it a few seconds for the browser to establish the connection before trying out gamepad. You will see in browser console that the connection is established and data channel is opened with hello world message sent from browser and receieved in python. Then you can move the joystick**
